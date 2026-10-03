@@ -400,3 +400,9 @@ body[data-page="sim"] .wm-pill{bottom:calc(122px + env(safe-area-inset-bottom,0p
   .il-pagehead h1{color:#000}
 }
 .sx-grid > *,.il-two > *,.il-split > *{min-width:0}
+
+/* Mention données fictives */
+.il-fict{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:6px 12px 6px 7px;font:700 .76rem/1.25 var(--sans);background:#fdecec;color:#8f1d1d;border:1px solid #f1b5b5}
+.il-fict svg{width:18px;height:18px;flex:none}
+.sx-res .il-fict{background:rgba(255,255,255,.1);color:#ffd2d2;border-color:rgba(255,160,160,.45)}
+.il-example .il-fict{background:rgba(255,255,255,.1);color:#ffd2d2;border-color:rgba(255,160,160,.45)}
