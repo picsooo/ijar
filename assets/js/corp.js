@@ -123,6 +123,27 @@
     if (box && m) box.hidden = false;
   }
 
+  /* ---- Vidéo de démonstration ---- */
+  document.querySelectorAll('.il-player').forEach(function (pl) {
+    var v = pl.querySelector('video');
+    function play() { pl.classList.add('is-playing'); v.controls = true; var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); }
+    pl.querySelector('.il-player__play').addEventListener('click', play);
+    document.querySelectorAll('[data-play="' + pl.id + '"]').forEach(function (b) {
+      b.addEventListener('click', function (e) { e.preventDefault(); pl.scrollIntoView({ behavior: 'smooth', block: 'center' }); play(); });
+    });
+  });
+  var modal = document.getElementById('il-modal');
+  if (modal) {
+    var mv = modal.querySelector('video');
+    document.querySelectorAll('[data-modal-video]').forEach(function (b) {
+      b.addEventListener('click', function () { modal.classList.add('is-on'); mv.currentTime = 0; var pr = mv.play(); if (pr && pr.catch) pr.catch(function () {}); });
+    });
+    function close() { mv.pause(); modal.classList.remove('is-on'); }
+    modal.querySelector('.il-modal__x').addEventListener('click', close);
+    modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  }
+
   /* ---- Pièces à fournir ---- */
   var docs = document.querySelector('.il-docs');
   if (docs) {

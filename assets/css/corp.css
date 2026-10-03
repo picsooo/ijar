@@ -452,3 +452,25 @@ body[data-page="sim"] .wm-pill{bottom:calc(122px + env(safe-area-inset-bottom,0p
   .il-slider__arrows{display:flex}
 }
 @media (prefers-reduced-motion:reduce){.il-slide,.il-slide__img{transition:none}.il-dot.is-on i::after{animation:none;width:100%}}
+
+/* ================= Vidéo de démonstration ================= */
+.il-vid{display:grid;gap:22px;align-items:center}
+@media (min-width:1000px){.il-vid{grid-template-columns:.8fr 1.2fr;gap:56px}}
+.il-vid h2{margin:12px 0 10px}
+.il-vid__go{margin-top:20px}
+.il-player{position:relative;border-radius:22px;overflow:hidden;background:var(--ink);aspect-ratio:16/9;box-shadow:0 30px 60px -30px rgba(11,47,87,.55)}
+.il-player video,.il-player img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.il-player__play{position:absolute;inset:0;z-index:2;border:0;padding:0;cursor:pointer;background:rgba(7,30,58,.28);display:grid;place-items:center;color:#fff;font:inherit}
+.il-player__btn{display:flex;align-items:center;gap:14px;background:#fff;color:var(--ink);border-radius:999px;padding:10px 22px 10px 10px;font-weight:800;font-size:1rem;box-shadow:0 14px 30px -10px rgba(0,0,0,.5)}
+.il-player__btn i{width:48px;height:48px;border-radius:50%;background:var(--brass);display:grid;place-items:center;animation:ilPulse 2s infinite}
+.il-player__btn i::after{content:"";border-left:15px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.il-player__dur{position:absolute;z-index:3;right:12px;bottom:12px;background:rgba(7,30,58,.75);color:#fff;border-radius:999px;padding:5px 11px;font-weight:700;font-size:.78rem;pointer-events:none}
+.il-player.is-playing .il-player__play,.il-player.is-playing .il-player__dur,.il-player.is-playing img{display:none}
+/* Fenêtre vidéo (page simulateur) */
+.il-modal{position:fixed;inset:0;z-index:120;background:rgba(5,18,36,.88);display:none;align-items:center;justify-content:center;padding:18px}
+.il-modal.is-on{display:flex}
+.il-modal video{width:min(1100px,100%);max-height:80vh;border-radius:16px;background:#000}
+.il-modal__x{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:14px;width:48px;height:48px;border-radius:50%;border:0;background:#fff;color:var(--ink);font-size:1.6rem;font-weight:800;cursor:pointer}
+.il-vidpill{text-decoration:none;white-space:nowrap;display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;background:#fff;color:var(--ink);border-radius:999px;padding:5px 12px 5px 6px;font:800 .78rem/1.2 var(--sans)}
+.il-vidpill i{width:20px;height:20px;border-radius:50%;background:var(--brass);display:grid;place-items:center;animation:ilPulse 2s infinite}
+.il-vidpill i::after{content:"";border-left:7px solid #fff;border-top:4.5px solid transparent;border-bottom:4.5px solid transparent;margin-left:2px}
