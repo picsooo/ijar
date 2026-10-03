@@ -85,7 +85,7 @@
     $('#sx-dock-v').textContent = da(shown);
 
     // Anneau de répartition
-    var parts = [[c.down, '#d9b867'], [c.rent * c.n, '#5fae95'], [c.rv, '#ffffff']], tot = c.total, off = 0, C = 2 * Math.PI * 42, svg = '';
+    var parts = [[c.down, '#86d38d'], [c.rent * c.n, '#4f8fd6'], [c.rv, '#ffffff']], tot = c.total, off = 0, C = 2 * Math.PI * 42, svg = '';
     parts.forEach(function (p) {
       var len = p[0] / tot * C;
       svg += '<circle cx="55" cy="55" r="42" fill="none" stroke="' + p[1] + '" stroke-width="14" stroke-dasharray="' + len + ' ' + (C - len) + '" stroke-dashoffset="' + (-off) + '"/>';
@@ -143,13 +143,13 @@
     var area = bal + ' L' + x(c.n) + ',' + y(0) + ' L' + x(0) + ',' + y(0) + ' Z';
     var grid = '';
     for (var yy = 0; yy <= S.years; yy++) {
-      grid += '<line x1="' + x(yy * 12) + '" x2="' + x(yy * 12) + '" y1="14" y2="' + (H - P) + '" stroke="#e3e9e5"/>' +
-        '<text x="' + x(yy * 12) + '" y="' + (H - 12) + '" font-size="12" text-anchor="middle" fill="#57675f">' + (yy === 0 ? 'Début' : 'An ' + yy) + '</text>';
+      grid += '<line x1="' + x(yy * 12) + '" x2="' + x(yy * 12) + '" y1="14" y2="' + (H - P) + '" stroke="#e3e9f0"/>' +
+        '<text x="' + x(yy * 12) + '" y="' + (H - 12) + '" font-size="12" text-anchor="middle" fill="#566476">' + (yy === 0 ? 'Début' : 'An ' + yy) + '</text>';
     }
     $('#sx-chart').innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Évolution du capital restant dû et des montants payés">' + grid +
-      '<path d="' + area + '" fill="rgba(15,45,40,.12)"/><path d="' + bal + '" fill="none" stroke="#0f2d28" stroke-width="2.5"/>' +
-      '<path d="' + paid + '" fill="none" stroke="#b08a35" stroke-width="2.5" stroke-dasharray="6 5"/>' +
-      '<circle cx="' + x(c.n) + '" cy="' + y(c.rv) + '" r="6" fill="#b08a35"/><text x="' + (x(c.n) - 10) + '" y="' + (y(c.rv) - 12) + '" font-size="12" text-anchor="end" fill="#0f2d28" font-weight="700">Option d\'achat</text></svg>';
+      '<path d="' + area + '" fill="rgba(11,47,87,.12)"/><path d="' + bal + '" fill="none" stroke="#0b2f57" stroke-width="2.5"/>' +
+      '<path d="' + paid + '" fill="none" stroke="#2b8a3b" stroke-width="2.5" stroke-dasharray="6 5"/>' +
+      '<circle cx="' + x(c.n) + '" cy="' + y(c.rv) + '" r="6" fill="#2b8a3b"/><text x="' + (x(c.n) - 10) + '" y="' + (y(c.rv) - 12) + '" font-size="12" text-anchor="end" fill="#0b2f57" font-weight="700">Option d\'achat</text></svg>';
   }
 
   /* Échéancier : par année ou par mois */
