@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Simulateur de loyer · Ijar Leasing Algérie</title>
-<meta name="description" content="Calculez le loyer mensuel de votre crédit-bail.">
+<title>Simulateur de crédit-bail · Ijar Leasing Algérie</title>
+<meta name="description" content="Simulez votre crédit-bail ILA : loyer, comparatif des durées, échéancier et avantage fiscal.">
 <meta name="theme-color" content="#0f2d28">
 <link rel="preload" href="assets/fonts/public-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 
@@ -15,36 +15,100 @@
 <header id="il-head"></header>
 <main>
 <section class="il-pagehead"><img src="https://images.pexels.com/photos/31573459/pexels-photo-31573459.jpeg?auto=compress&cs=tinysrgb&w=1600" alt=""><div class="il-wrap">
-<p class="il-crumb"><a href="index.html">Accueil</a> / Simulateur</p><h1>Calculez votre loyer</h1><p class="il-lead">Indiquez le montant, l'apport et la durée. Le résultat est une estimation : l'offre définitive suit l'étude du dossier.</p></div></section>
-<section class="il-sec"><div class="il-wrap">
-<form class="il-sim" data-sim="full" onsubmit="return false">
-  <div class="il-sim__form">
-    <div class="il-field"><label for="s-amt">Montant de l'équipement (HT) <output data-amount-out></output></label>
-      <input id="s-amt" type="range" min="2000000" max="300000000" step="500000" value="45000000" data-amount></div>
-    <div class="il-field"><label>Apport initial</label><div class="il-seg il-seg--3" data-down role="group"><button type="button" data-v="0.1" aria-pressed="false">10 %</button><button type="button" data-v="0.2" aria-pressed="true">20 %</button><button type="button" data-v="0.3" aria-pressed="false">30 %</button></div></div>
-    <div class="il-field"><label>Durée</label><div class="il-seg " data-years role="group"><button type="button" data-v="2" aria-pressed="false">2 ans</button><button type="button" data-v="3" aria-pressed="false">3 ans</button><button type="button" data-v="4" aria-pressed="false">4 ans</button><button type="button" data-v="5" aria-pressed="true">5 ans</button></div></div>
-    <div class="il-field"><label>Périodicité</label><div class="il-seg il-seg--3" role="group"><button type="button" aria-pressed="true" disabled>Mensuelle</button></div></div>
-    <span class="il-check">Hypothèses : taux annuel 8,5 % et valeur résiduelle 1 %, à valider par l'administration d'ILA</span>
+<p class="il-crumb"><a href="index.html">Accueil</a> / Simulateur</p>
+<h1>Simulez votre crédit-bail</h1>
+<p class="il-lead">Quatre choix, un loyer. Puis comparez les durées, consultez l'échéancier complet et estimez l'avantage fiscal.</p>
+<div class="sx-intro"><span class="il-pill il-pill--brass">Nouveau</span><span class="il-pill il-pill--soft">Moins de 30 secondes</span><span class="il-pill il-pill--soft">Sans inscription</span></div>
+</div></section>
+
+<section class="sx" id="sx"><div class="il-wrap">
+<div class="sx-grid">
+<div>
+  <div class="sx-step" id="sx-step-1"><div class="sx-step__h"><span class="sx-step__n">1</span><h2>Quel équipement ?</h2><span class="il-pill il-pill--soft" id="sx-progress">Étape 1 sur 4</span></div>
+    <div class="sx-eq" role="group" aria-label="Équipement"><button type="button" data-eq="truck" data-name="Transport et logistique" data-default="18000000" data-chips="8000000,15000000,25000000,45000000,90000000" aria-pressed="false"><img src="https://images.unsplash.com/photo-1779583074717-e60fa13131ce?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"><span>Transport et logistique</span></button><button type="button" data-eq="btp" data-name="BTPH" data-default="35000000" data-chips="12000000,25000000,45000000,80000000,150000000" aria-pressed="false"><img src="https://images.unsplash.com/photo-1747004066130-c6531b74d353?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"><span>BTPH</span></button><button type="button" data-eq="vans" data-name="Véhicules utilitaires" data-default="6000000" data-chips="3000000,5000000,8000000,15000000,30000000" aria-pressed="false"><img src="https://images.pexels.com/photos/31573459/pexels-photo-31573459.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" loading="lazy"><span>Véhicules utilitaires</span></button><button type="button" data-eq="industry" data-name="Industrie" data-default="60000000" data-chips="10000000,30000000,60000000,120000000,250000000" aria-pressed="false"><img src="https://images.unsplash.com/photo-1647427060118-4911c9821b82?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"><span>Industrie</span></button><button type="button" data-eq="health" data-name="Santé" data-default="40000000" data-chips="5000000,15000000,40000000,90000000,200000000" aria-pressed="false"><img src="https://images.unsplash.com/photo-1666214280352-db292c05fd80?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"><span>Santé</span></button><button type="button" data-eq="hotel" data-name="Hôtellerie" data-default="20000000" data-chips="5000000,10000000,20000000,40000000,80000000" aria-pressed="false"><img src="https://images.unsplash.com/photo-1790156591731-09dbf6aee75a?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"><span>Hôtellerie</span></button></div></div>
+
+  <div class="sx-step" id="sx-step-2"><div class="sx-step__h"><span class="sx-step__n">2</span><h2>Son prix hors taxes</h2></div>
+    <label class="sx-amount" for="sx-amount"><input id="sx-amount" inputmode="numeric" autocomplete="off" aria-label="Montant hors taxes"><span>DA</span></label>
+    <input id="sx-range" type="range" min="1000000" max="300000000" step="500000" aria-label="Montant">
+    <div class="sx-chips" id="sx-chips" aria-label="Montants rapides"></div>
+    <p class="sx-note">Indiquez le montant de la facture pro forma de votre fournisseur.</p></div>
+
+  <div class="sx-step" id="sx-step-3"><div class="sx-step__h"><span class="sx-step__n">3</span><h2>Votre apport</h2></div>
+    <div class="il-seg il-seg--3" data-k="down" role="group"><button type="button" data-v="0.1">10 %</button><button type="button" data-v="0.2">20 %</button><button type="button" data-v="0.3">30 %</button></div>
+    <p class="sx-note" id="sx-down-note"></p></div>
+
+  <div class="sx-step" id="sx-step-4"><div class="sx-step__h"><span class="sx-step__n">4</span><h2>La durée du contrat</h2></div>
+    <div class="il-seg " data-k="years" role="group"><button type="button" data-v="2">2 ans</button><button type="button" data-v="3">3 ans</button><button type="button" data-v="4">4 ans</button><button type="button" data-v="5">5 ans</button></div>
+    <p class="sx-note" id="sx-years-note"></p></div>
+
+  <details class="sx-step sx-adv"><summary>Hypothèses et fiscalité <span class="il-pill il-pill--soft">Avancé</span></summary>
+    <div class="sx-adv__grid">
+      <div class="il-field"><label for="sx-rate">Taux annuel indicatif <output id="sx-rate-o"></output></label><input id="sx-rate" type="range" min="5" max="14" step="0.5" value="8.5"></div>
+      <div class="il-field"><label for="sx-rv">Valeur résiduelle <output id="sx-rv-o"></output></label><input id="sx-rv" type="range" min="1" max="10" step="1" value="1"></div>
+      <label class="sx-switch"><input type="checkbox" id="sx-ttc-t">Afficher le loyer TTC (TVA 19 %)</label>
+      <div class="il-field"><label for="sx-ibs">Taux d'impôt sur les bénéfices</label>
+        <select id="sx-ibs" class="il-num" style="width:100%;min-height:46px;border:1.5px solid var(--stone);border-radius:12px;padding:0 12px;font:600 .95rem var(--sans)"><option value="0.19">19 % (production)</option><option value="0.23">23 % (BTPH, tourisme)</option><option value="0.26">26 % (autres activités)</option></select></div>
+    </div>
+    <p class="il-check" style="margin-top:16px">Taux et valeur résiduelle à valider par l'administration d'ILA</p>
+  </details>
+</div>
+
+<aside class="sx-res" aria-live="polite">
+  <div class="sx-res__eq"><img id="sx-res-img" src="" alt=""><div><b id="sx-res-name"></b><small id="sx-res-sub"></small></div></div>
+  <span id="sx-big-l">Loyer mensuel estimé HT</span>
+  <div class="sx-big" id="sx-big">–</div>
+  <div class="sx-ttc" id="sx-ttc"></div>
+  <div class="sx-donut"><svg viewBox="0 0 110 110" id="sx-donut" aria-hidden="true"></svg>
+    <ul class="sx-legend">
+      <li><i style="background:#d9b867"></i>Apport<b id="sx-l-down"></b></li>
+      <li><i style="background:#5fae95"></i>Loyers<b id="sx-l-rents"></b></li>
+      <li><i style="background:#fff"></i>Option d'achat<b id="sx-l-rv"></b></li>
+    </ul></div>
+  <ul class="sx-rows">
+    <li><span>Financé par ILA</span><b id="sx-r-fin"></b></li>
+    <li><span>Coût total estimé HT</span><b id="sx-r-total"></b></li>
+    <li><span>Coût du financement</span><b id="sx-r-cost"></b></li>
+  </ul>
+  <div class="sx-tips" id="sx-tips"></div>
+  <div class="sx-actions">
+    <a class="il-btn il-btn--brass" data-sx-demande href="demande.html">Demander cette offre</a>
+    <div class="sx-actions__row"><button type="button" class="il-btn sx-ghost" id="sx-share">Partager</button><button type="button" class="il-btn sx-ghost" id="sx-print">Imprimer</button></div>
   </div>
-  <div class="il-sim__out" aria-live="polite">
-    <span>Loyer mensuel estimé (HT)</span>
-    <div class="il-sim__big" data-out="rent">–</div>
-    <ul class="il-sim__rows">
-      <li><span>Apport initial</span><b data-out="down">–</b></li>
-      <li><span>Montant financé par ILA</span><b data-out="financed">–</b></li>
-      <li><span>Nombre de loyers</span><b data-out="n">–</b></li>
-      <li><span>Valeur résiduelle (option d'achat)</span><b data-out="rv">–</b></li>
-      <li><span>Coût total estimé</span><b data-out="total">–</b></li>
-    </ul>
-    <div class="il-bars" aria-hidden="true"></div>
-    <div class="il-bars__legend"><span>Apport</span><span>Loyers</span><span>Vous êtes propriétaire</span></div>
-    <a class="il-btn il-btn--brass" style="width:100%;margin-top:22px" href="demande.html">Demander cette offre</a>
+  <p class="il-check" style="margin-top:14px">Estimation indicative, à valider par l'administration d'ILA</p>
+</aside>
+</div>
+
+<div class="sx-block"><div class="sx-block__h"><h2>Comparez les durées</h2><span class="il-pill il-pill--live">Recalculé en direct</span></div>
+  <div class="sx-compare" id="sx-compare"></div>
+  <p class="sx-note">Touchez une durée pour l'appliquer à votre simulation.</p></div>
+
+<div class="sx-block"><div class="sx-block__h"><h2>Votre contrat dans le temps</h2></div>
+  <div class="sx-chart" id="sx-chart"></div>
+  <div class="sx-chart__legend"><span><i style="background:rgba(15,45,40,.25);border:2px solid #0f2d28"></i>Capital restant dû</span><span><i style="background:#b08a35"></i>Total déjà payé</span></div></div>
+
+<div class="sx-block"><div class="sx-block__h"><h2>Échéancier</h2>
+  <div class="sx-tabs" role="group"><button type="button" data-tab="year" aria-pressed="true">Par année</button><button type="button" data-tab="month" aria-pressed="false">Mois par mois</button></div></div>
+  <div class="sx-tablewrap"><table class="sx-table" id="sx-table"><thead><tr><th>Période</th><th>Loyers HT</th><th>Loyers TTC</th><th>Capital</th><th>Intérêts</th><th>Restant dû</th></tr></thead><tbody></tbody></table></div></div>
+
+<div class="sx-block"><div class="sx-block__h"><h2>L'avantage fiscal du leasing</h2><span class="il-pill il-pill--soft">Estimation</span></div>
+  <div class="sx-fisc">
+    <div class="sx-kpi"><span>Loyers déductibles sur la durée</span><strong id="sx-f-rents"></strong></div>
+    <div class="sx-kpi"><span>TVA réglée chaque mois, au lieu d'une avance</span><strong id="sx-f-tva"></strong></div>
+    <div class="sx-kpi sx-kpi--ink"><span>Économie d'impôt estimée</span><strong id="sx-f-ibs"></strong></div>
   </div>
-</form></div></section>
+  <p class="il-check" style="margin-top:16px">Estimation indicative, à valider avec votre comptable</p></div>
+
+<div class="il-band" style="margin-top:18px"><img src="https://images.unsplash.com/photo-1747004066130-c6531b74d353?auto=format&fit=crop&w=1600&q=70" alt="" loading="lazy">
+  <div><div><h2>Votre simulation vous convient ?</h2><p>Envoyez-la à ILA : un chargé d'affaires vous rappelle avec une offre.</p></div><a class="il-btn il-btn--white" data-sx-demande href="demande.html">Demander cette offre</a></div></div>
+</div></section>
+
+<div class="sx-dock" id="sx-dock"><div><small>Votre loyer estimé</small><strong id="sx-dock-v">–</strong></div><a class="il-btn il-btn--brass" data-sx-demande href="demande.html">Demander</a></div>
+<div class="sx-toast" id="sx-toast" role="status"></div>
 
 </main>
 <div id="il-foot"></div>
 <script src="assets/js/corp.js"></script>
+<script src="assets/js/sim.js"></script>
 <script src="assets/js/demo.js"></script>
 </body>
 </html>

@@ -2,15 +2,17 @@
   var LOGO = 'https://www.ijarleasingalgerie.dz/IMAGE/Logo.png';
   var page = document.body.getAttribute('data-page') || '';
   var links = [
-    ['index.html', 'Accueil', 'home'],
-    ['solutions.html', 'Solutions', 'solutions'],
+    ['solutions.html', 'Le leasing', 'solutions'],
+    ['secteurs.html', 'Secteurs', 'secteurs'],
     ['simulateur.html', 'Simulateur', 'sim'],
-    ['demande.html', 'Demande de financement', 'demande'],
+    ['a-propos.html', 'À propos', 'apropos'],
+    ['faq.html', 'Questions', 'faq'],
     ['contact.html', 'Contact', 'contact']
   ];
-  function nav(cls) {
+  function nav() {
     return links.map(function (l) {
-      return '<a href="' + l[0] + '"' + (l[2] === page ? ' aria-current="page"' : '') + '>' + l[1] + '</a>';
+      var dot = l[2] === 'sim' ? '<i class="il-navdot" aria-hidden="true"></i>' : '';
+      return '<a href="' + l[0] + '"' + (l[2] === page ? ' aria-current="page"' : '') + '>' + l[1] + dot + '</a>';
     }).join('');
   }
 
@@ -47,7 +49,7 @@
         '<div class="il-foot__grid">' +
           '<div><p class="il-foot__big">Votre partenaire financier pour équiper l\'entreprise.</p><p>Ijar Leasing Algérie SPA, établissement financier de crédit-bail créé par la Banque Extérieure d\'Algérie. Capital social de 6,5 milliards DA.</p></div>' +
           '<div><h3>Siège</h3><ul><li>71, rue Mohamed Belkacemi</li><li>El Madania, Alger</li><li><a href="tel:+21323738009">023 73 80 09</a></li><li>Fax 023 73 80 10</li><li><a href="mailto:contact@ijarleasingalgerie.dz">contact@ijarleasingalgerie.dz</a></li></ul></div>' +
-          '<div><h3>Raccourcis</h3><ul>' + links.map(function (l) { return '<li><a href="' + l[0] + '">' + l[1] + '</a></li>'; }).join('') + '</ul></div>' +
+          '<div><h3>Raccourcis</h3><ul>' + links.map(function (l) { return '<li><a href="' + l[0] + '">' + l[1] + '</a></li>'; }).join('') + '<li><a href="demande.html">Demande de financement</a></li></ul></div>' +
         '</div>' +
         '<div class="il-foot__bottom">© Ijar Leasing Algérie SPA. Maquette proposée par Webminds Digital Solutions.</div>' +
       '</div></footer>';
@@ -87,6 +89,8 @@
       if (amtOut) amtOut.textContent = fmt(a) + ' DA';
       var res = calc(a, segVal(dwn), segVal(dur));
       sim.querySelectorAll('[data-out="rent"]').forEach(function (el) { el.textContent = fmt(res.rent) + ' DA'; });
+      var go = sim.querySelector('[data-sim-link]');
+      if (go) go.href = 'simulateur.html?m=' + a + '&a=' + segVal(dwn) + '&d=' + segVal(dur);
       if (!full) return;
       var map = { down: res.down, financed: res.financed, rv: res.rv, total: res.total, n: res.n };
       Object.keys(map).forEach(function (k) {
@@ -108,6 +112,16 @@
     bindSeg(dur, run); bindSeg(dwn, run);
     run();
   });
+
+  /* ---- Demande pré-remplie depuis le simulateur ---- */
+  if (page === 'demande' && location.search) {
+    var q = new URLSearchParams(location.search), names = { truck: 'Transport et logistique', btp: 'BTPH', vans: 'Véhicules utilitaires', industry: 'Industrie', health: 'Santé', hotel: 'Hôtellerie' };
+    var m = parseFloat(q.get('m')), sel = document.getElementById('d-sec'), mt = document.getElementById('d-mt'), ds = document.getElementById('d-desc'), box = document.getElementById('d-prefill');
+    if (sel && names[q.get('s')]) sel.value = names[q.get('s')];
+    if (mt && m) mt.value = fmt(m);
+    if (ds && m) ds.value = 'Simulation : ' + fmt(m) + ' DA, apport ' + Math.round(parseFloat(q.get('a')) * 100) + ' %, ' + q.get('d') + ' ans.';
+    if (box && m) box.hidden = false;
+  }
 
   /* ---- Pièces à fournir ---- */
   var docs = document.querySelector('.il-docs');
