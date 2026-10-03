@@ -45,7 +45,7 @@
       'src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.818556013759!2d3.046569214504149!3d36.75092607817307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fb27a60f15e31%3A0x955471d0676ab82c!2sIjar%20Leasing%20Alg%C3%A9rie!5e0!3m2!1sfr!2sdz!4v1612269883743!5m2!1sfr!2sdz"></iframe>' +
       '<footer class="il-foot"><div class="il-wrap">' +
         '<div class="il-foot__grid">' +
-          '<div><h3>Ijar Leasing Algérie</h3><p>Établissement financier de crédit-bail créé par la Banque Extérieure d\'Algérie. Capital social de 6,5 milliards DA.</p></div>' +
+          '<div><p class="il-foot__big">Votre partenaire financier pour équiper l\'entreprise.</p><p>Ijar Leasing Algérie SPA, établissement financier de crédit-bail créé par la Banque Extérieure d\'Algérie. Capital social de 6,5 milliards DA.</p></div>' +
           '<div><h3>Siège</h3><ul><li>71, rue Mohamed Belkacemi</li><li>El Madania, Alger</li><li><a href="tel:+21323738009">023 73 80 09</a></li><li>Fax 023 73 80 10</li><li><a href="mailto:contact@ijarleasingalgerie.dz">contact@ijarleasingalgerie.dz</a></li></ul></div>' +
           '<div><h3>Raccourcis</h3><ul>' + links.map(function (l) { return '<li><a href="' + l[0] + '">' + l[1] + '</a></li>'; }).join('') + '</ul></div>' +
         '</div>' +

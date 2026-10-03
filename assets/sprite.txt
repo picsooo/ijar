@@ -1,8 +1,0 @@
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-<symbol id="ic-truck" viewBox="0 0 52 52"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M4 14h26v20H4zM30 21h9l7 7v6H30z"/><circle cx="12" cy="37" r="4"/><circle cx="38" cy="37" r="4"/><path d="M33 21v7h13"/></g></symbol>
-<symbol id="ic-car" viewBox="0 0 52 52"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M6 31v-6l5-9h22l8 9 5 2v4"/><path d="M6 31h40"/><circle cx="15" cy="33" r="4"/><circle cx="37" cy="33" r="4"/><path d="M13 25h27M24 16v9"/></g></symbol>
-<symbol id="ic-btp" viewBox="0 0 52 52"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M5 34h24v-9H16l-4 9"/><rect x="5" y="34" width="24" height="6" rx="3"/><path d="M22 25l9-13 13 6-3 10"/><path d="M41 28l-6 4 4 4 6-3z"/></g></symbol>
-<symbol id="ic-industry" viewBox="0 0 52 52"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M5 42V22l10 6v-6l10 6v-6l10 6V10h8v32z"/><path d="M11 36h4M21 36h4M31 36h4"/></g></symbol>
-<symbol id="ic-health" viewBox="0 0 52 52"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><rect x="6" y="9" width="40" height="26" rx="3"/><path d="M10 24h8l3-6 5 12 3-6h13"/><path d="M20 43h12M26 35v8"/></g></symbol>
-<symbol id="ic-hotel" viewBox="0 0 52 52"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M5 40V14M5 30h42v10M5 24h12a4 4 0 014 4v2"/><path d="M21 30v-8h18a8 8 0 018 8"/><circle cx="12" cy="20" r="3"/></g></symbol>
-</svg>
