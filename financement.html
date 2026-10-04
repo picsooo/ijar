@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="fr" data-version="v1" data-root="./">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Demande de financement en ligne · Ijar Leasing Algérie</title>
+<meta name="description" content="Déposez votre demande de crédit-bail en 6 étapes et préparez votre dossier pièce par pièce.">
+<meta name="theme-color" content="#0b2f57">
+<link rel="preload" href="assets/fonts/public-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/corp.css">
+<link rel="stylesheet" href="assets/css/financement.css">
+</head>
+<body data-page="financement">
+<header id="il-head"></header>
+<main class="fx">
+
+<section class="fx-top"><div class="il-wrap">
+  <p class="il-crumb"><a href="index.html">Accueil</a> / Demande de financement en ligne</p>
+  <div class="fx-top__row">
+    <div><h1>Votre demande de financement</h1><p>Six étapes, environ 5 minutes. Nos conseils vous guident pour préparer un dossier complet.</p></div>
+    <div class="fx-top__pct"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19"/><circle id="fx-ring" cx="22" cy="22" r="19"/></svg><span id="fx-pct">0 %</span></div>
+  </div>
+  <ol class="fx-steps" id="fx-steps" aria-label="Étapes de la demande">
+    <li data-i="0"><b>1</b><span>Financement</span></li>
+    <li data-i="1"><b>2</b><span>Votre projet</span></li>
+    <li data-i="2"><b>3</b><span>Entreprise</span></li>
+    <li data-i="3"><b>4</b><span>Interlocuteur</span></li>
+    <li data-i="4"><b>5</b><span>Dossier</span></li>
+    <li data-i="5"><b>6</b><span>Envoi</span></li>
+  </ol>
+</div></section>
+
+<section class="fx-body"><div class="il-wrap fx-grid">
+<form class="fx-card" id="fx-form" novalidate>
+
+  <!-- 1. Type de financement -->
+  <fieldset class="fx-pane" data-step="0">
+    <legend><small>Étape 1 sur 6</small>Quel équipement souhaitez-vous financer ?</legend>
+    <p class="fx-sub">Choisissez le secteur qui correspond à votre projet.</p>
+    <div class="fx-types" role="radiogroup" aria-label="Type de financement">
+      <label class="fx-type"><input type="radio" name="type" value="truck" required><span class="fx-ico"><svg viewBox="0 0 24 24"><path d="M1 6h13v10H1z"/><path d="M14 9h4l3 3v4h-7"/><circle cx="5.5" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></svg></span><b>Transport et logistique</b><small>Camions, semi-remorques, frigorifiques</small></label>
+      <label class="fx-type"><input type="radio" name="type" value="btp"><span class="fx-ico"><svg viewBox="0 0 24 24"><path d="M2 18h12v-5H8l-2-4H2z"/><path d="M14 13l4-7 4 3-3 2"/><circle cx="5" cy="19" r="1.6"/><circle cx="11" cy="19" r="1.6"/></svg></span><b>BTPH</b><small>Engins, levage, centrales à béton</small></label>
+      <label class="fx-type"><input type="radio" name="type" value="vans"><span class="fx-ico"><svg viewBox="0 0 24 24"><path d="M2 7h12l5 4h3v5H2z"/><path d="M14 7v4h5"/><circle cx="6.5" cy="17" r="1.8"/><circle cx="17.5" cy="17" r="1.8"/></svg></span><b>Véhicules utilitaires</b><small>Fourgons, pick-up, véhicules de service</small></label>
+      <label class="fx-type"><input type="radio" name="type" value="industry"><span class="fx-ico"><svg viewBox="0 0 24 24"><path d="M2 21V10l6 4V10l6 4V5h4l2 16z"/><path d="M6 17h2M11 17h2"/></svg></span><b>Industrie</b><small>Lignes de production, machines-outils</small></label>
+      <label class="fx-type"><input type="radio" name="type" value="health"><span class="fx-ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M12 9v7M8.5 12.5h7"/></svg></span><b>Santé</b><small>Imagerie, laboratoire, cabinets</small></label>
+      <label class="fx-type"><input type="radio" name="type" value="hotel"><span class="fx-ico"><svg viewBox="0 0 24 24"><path d="M3 20h18"/><path d="M5 20v-6a7 7 0 0 1 14 0v6"/><path d="M12 7V4M10 4h4"/></svg></span><b>Hôtellerie</b><small>Cuisines pro, mobilier, climatisation</small></label>
+    </div>
+    <p class="fx-err" data-err="type">Choisissez un secteur pour continuer.</p>
+  </fieldset>
+
+  <!-- 2. Projet -->
+  <fieldset class="fx-pane" data-step="1" hidden>
+    <legend><small>Étape 2 sur 6</small>Décrivez votre projet</legend>
+    <p class="fx-sub" id="fx-type-recall"></p>
+    <div class="fx-f"><label for="f-eq">Équipement à financer</label><textarea id="f-eq" name="eq" required placeholder="Exemple : deux camions frigorifiques neufs 19 t"></textarea></div>
+    <div class="fx-2">
+      <div class="fx-f"><label for="f-amt">Montant hors taxes estimé</label><div class="fx-unit"><input id="f-amt" name="amt" inputmode="numeric" required placeholder="25 000 000"><span>DA</span></div></div>
+      <div class="fx-f"><label for="f-qty">Quantité</label><input id="f-qty" name="qty" type="number" min="1" value="1"></div>
+    </div>
+    <div class="fx-2">
+      <div class="fx-f"><span class="fx-lab">Durée souhaitée</span><div class="fx-seg" data-name="years"><button type="button" data-v="2">2 ans</button><button type="button" data-v="3">3 ans</button><button type="button" data-v="4">4 ans</button><button type="button" data-v="5" aria-pressed="true">5 ans</button></div></div>
+      <div class="fx-f"><span class="fx-lab">Apport</span><div class="fx-seg" data-name="down"><button type="button" data-v="0">0 %</button><button type="button" data-v="0.1">10 %</button><button type="button" data-v="0.2" aria-pressed="true">20 %</button><button type="button" data-v="0.3">30 %</button></div></div>
+    </div>
+    <div class="fx-2">
+      <div class="fx-f"><span class="fx-lab">Avez-vous choisi votre fournisseur ?</span><div class="fx-seg" data-name="sup"><button type="button" data-v="oui">Oui</button><button type="button" data-v="non" aria-pressed="true">Pas encore</button></div></div>
+      <div class="fx-f"><span class="fx-lab">Avez-vous une facture pro forma ?</span><div class="fx-seg" data-name="pf"><button type="button" data-v="oui">Oui</button><button type="button" data-v="non" aria-pressed="true">Pas encore</button></div></div>
+    </div>
+    <div class="fx-f" id="fx-sup-name" hidden><label for="f-sup">Nom du fournisseur</label><input id="f-sup" name="supname" placeholder="Exemple : concessionnaire, fabricant, importateur"></div>
+    <div class="fx-est" aria-live="polite">
+      <div><span>Loyer mensuel estimé HT</span><strong id="fx-rent">–</strong></div>
+      <div><span>Montant financé</span><b id="fx-fin">–</b></div>
+      <div><span>Nombre de loyers</span><b id="fx-n">–</b></div>
+      <em>Données fictives, à titre d'exemple. Taux 8,5 % et valeur résiduelle 1 % indicatifs.</em>
+    </div>
+    <p class="fx-err" data-err="1">Décrivez l'équipement et indiquez un montant pour continuer.</p>
+  </fieldset>
+
+  <!-- 3. Entreprise -->
+  <fieldset class="fx-pane" data-step="2" hidden>
+    <legend><small>Étape 3 sur 6</small>Votre entreprise</legend>
+    <p class="fx-sub">Ces informations permettent à ILA de préparer l'étude de votre dossier.</p>
+    <div class="fx-f"><label for="f-soc">Raison sociale</label><input id="f-soc" name="soc" required autocomplete="organization"></div>
+    <div class="fx-2">
+      <div class="fx-f"><label for="f-form">Forme juridique</label><select id="f-form" name="form"><option>SARL</option><option>EURL</option><option>SPA</option><option>SNC</option><option>Personne physique</option><option>Artisan</option><option>Autre</option></select></div>
+      <div class="fx-f"><label for="f-year">Année de création</label><input id="f-year" name="year" inputmode="numeric" maxlength="4" placeholder="2015"></div>
+    </div>
+    <div class="fx-2">
+      <div class="fx-f"><label for="f-wil">Wilaya du siège</label><input id="f-wil" name="wil" placeholder="Exemple : Alger"></div>
+      <div class="fx-f"><label for="f-act">Activité principale</label><input id="f-act" name="act" placeholder="Exemple : transport de marchandises"></div>
+    </div>
+    <p class="fx-err" data-err="2">Indiquez la raison sociale pour continuer.</p>
+  </fieldset>
+
+  <!-- 4. Interlocuteur -->
+  <fieldset class="fx-pane" data-step="3" hidden>
+    <legend><small>Étape 4 sur 6</small>Qui devons-nous contacter ?</legend>
+    <p class="fx-sub">Un chargé d'affaires vous recontacte pour étudier votre projet.</p>
+    <div class="fx-2">
+      <div class="fx-f"><label for="f-nom">Nom et prénom</label><input id="f-nom" name="nom" required autocomplete="name"></div>
+      <div class="fx-f"><label for="f-fn">Fonction</label><input id="f-fn" name="fn" placeholder="Exemple : gérant"></div>
+    </div>
+    <div class="fx-2">
+      <div class="fx-f"><label for="f-tel">Téléphone</label><input id="f-tel" name="tel" type="tel" required autocomplete="tel" placeholder="05 00 00 00 00"></div>
+      <div class="fx-f"><label for="f-mail">E-mail</label><input id="f-mail" name="mail" type="email" autocomplete="email"></div>
+    </div>
+    <div class="fx-f"><span class="fx-lab">Quand préférez-vous être rappelé ?</span><div class="fx-seg" data-name="slot"><button type="button" data-v="Matin" aria-pressed="true">Le matin</button><button type="button" data-v="Après-midi">L'après-midi</button><button type="button" data-v="Indifférent">Peu importe</button></div></div>
+    <p class="fx-err" data-err="3">Indiquez un nom et un numéro de téléphone pour continuer.</p>
+  </fieldset>
+
+  <!-- 5. Dossier -->
+  <fieldset class="fx-pane" data-step="4" hidden>
+    <legend><small>Étape 5 sur 6</small>Préparez votre dossier</legend>
+    <p class="fx-sub">Cochez les pièces que vous avez déjà. Cette liste vous sert de pense-bête, elle n'empêche pas l'envoi.</p>
+    <div class="fx-docbar"><div><i id="fx-docbar"></i></div><span id="fx-doctxt">0 pièce prête</span></div>
+    <div id="fx-docs"></div>
+  </fieldset>
+
+  <!-- 6. Récapitulatif -->
+  <fieldset class="fx-pane" data-step="5" hidden>
+    <legend><small>Étape 6 sur 6</small>Vérifiez et envoyez</legend>
+    <p class="fx-sub">Relisez votre demande avant l'envoi.</p>
+    <div class="fx-recap" id="fx-recap"></div>
+    <label class="fx-consent"><input type="checkbox" id="f-ok"><span>J'accepte d'être recontacté par Ijar Leasing Algérie au sujet de cette demande.</span></label>
+    <p class="fx-err" data-err="5">Cochez la case pour envoyer votre demande.</p>
+  </fieldset>
+
+  <!-- Confirmation -->
+  <div class="fx-pane fx-done" data-step="6" hidden>
+    <div class="fx-done__ico"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></div>
+    <h2>Votre demande est prête</h2>
+    <p>Dans la version finale, elle serait transmise à un chargé d'affaires ILA, qui vous recontacterait pour étudier votre projet.</p>
+    <p class="fx-demo">Maquette de démonstration : aucune donnée n'a été envoyée ni enregistrée.</p>
+    <ol class="fx-next"><li><b>L'étude</b><span>Décision centralisée et processus simple.</span></li><li><b>L'acquisition</b><span>ILA achète le bien auprès de votre fournisseur.</span></li><li><b>L'utilisation</b><span>Vous exploitez l'équipement et réglez vos loyers.</span></li></ol>
+    <div class="fx-done__btns"><a class="il-btn il-btn--ink" href="tutoriels.html">Voir les tutoriels vidéo</a><a class="il-btn il-btn--line" href="index.html">Retour à l'accueil</a></div>
+  </div>
+
+  <div class="fx-nav" id="fx-nav">
+    <button type="button" class="il-btn il-btn--line" id="fx-prev">Précédent</button>
+    <button type="button" class="il-btn il-btn--brass" id="fx-next">Continuer<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </div>
+</form>
+
+<aside class="fx-side">
+  <div class="fx-hint" aria-live="polite">
+    <span class="fx-hint__k"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>Conseil ILA</span>
+    <h3 id="fx-hint-t"></h3>
+    <p id="fx-hint-p"></p>
+    <ul id="fx-hint-l"></ul>
+  </div>
+  <div class="fx-mini">
+    <h4>Besoin d'aide ?</h4>
+    <a href="tel:+21323738009">023 73 80 09</a>
+    <a href="mailto:contact@ijarleasingalgerie.dz">contact@ijarleasingalgerie.dz</a>
+    <a class="fx-mini__v" href="tutoriels.html#dossier">▶ Vidéo : les pièces à fournir</a>
+  </div>
+</aside>
+</div></section>
+</main>
+<div id="il-foot"></div>
+<script src="assets/js/corp.js"></script>
+<script src="assets/js/financement.js"></script>
+<script src="assets/js/demo.js"></script>
+</body>
+</html>
