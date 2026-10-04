@@ -196,7 +196,7 @@
     if (t.classList.contains('sx-tip')) { S[t.dataset.tk] = parseFloat(t.dataset.tv); touched[t.dataset.tk === 'down' ? 3 : 4] = true; render(); toast('Simulation mise à jour'); return; }
     if (t.classList.contains('sx-cmp')) { S.years = parseInt(t.dataset.y, 10); touched[4] = true; render(); return; }
     if (t.dataset.tab) { tableMode = t.dataset.tab; $$('.sx-tabs button').forEach(function (x) { x.setAttribute('aria-pressed', x === t ? 'true' : 'false'); }); render(); return; }
-    if (t.id === 'sx-share') { share(); return; }
+    if (t.id === 'sx-share') { return; }
     if (t.id === 'sx-print') { window.print(); return; }
   });
   $('#sx-amount').addEventListener('input', function (e) {

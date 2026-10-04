@@ -504,3 +504,11 @@ body[data-page="sim"] .wm-pill{bottom:calc(122px + env(safe-area-inset-bottom,0p
 .il-tcat__k{font-weight:800;font-size:1rem;color:#fff;background:var(--brass);border-radius:12px;padding:8px 11px;line-height:1}
 .il-tcat h2{margin:0 0 4px;font-size:clamp(1.5rem,3vw,2rem)}
 .il-tcat__head p{margin:0;color:var(--muted)}
+
+/* Bouton Partager désactivé (maquette) */
+.sx-lock{position:relative;display:block;cursor:not-allowed}
+.sx-lock .sx-ghost{width:100%;opacity:.45;pointer-events:none;gap:8px}
+.sx-tip{position:absolute;left:50%;bottom:calc(100% + 10px);transform:translate(-50%,4px);display:flex;align-items:center;gap:8px;white-space:nowrap;background:#fff;color:#0b2f57;font:700 .8rem/1.2 var(--sans,inherit);padding:9px 12px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.3);opacity:0;visibility:hidden;transition:opacity .15s,transform .15s;z-index:5}
+.sx-tip svg{color:#e8860c;flex:none}
+.sx-tip::after{content:"";position:absolute;left:50%;top:100%;margin-left:-6px;border:6px solid transparent;border-top-color:#fff}
+.sx-lock:hover .sx-tip,.sx-lock:focus .sx-tip,.sx-lock:focus-within .sx-tip{opacity:1;visibility:visible;transform:translate(-50%,0)}
