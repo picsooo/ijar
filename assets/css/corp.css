@@ -494,3 +494,13 @@ body[data-page="sim"] .wm-pill{bottom:calc(122px + env(safe-area-inset-bottom,0p
 .il-tuto__cta h2{color:#fff;font-size:clamp(1.6rem,3.5vw,2.3rem);margin:0 0 6px}
 .il-tuto__cta p{margin:0;color:#c4d3e6}
 .il-tuto__btns{display:flex;gap:10px;flex-wrap:wrap}
+
+.il-ttabs{position:sticky;top:64px;z-index:20;background:rgba(242,245,248,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(11,47,87,.08)}
+.il-ttabs .il-wrap{display:flex;gap:8px;overflow-x:auto;padding-top:12px;padding-bottom:12px;scrollbar-width:none}
+.il-ttabs a{flex:0 0 auto;text-decoration:none;font-weight:700;font-size:.9rem;color:var(--ink);background:var(--white);border:1px solid rgba(11,47,87,.12);border-radius:999px;padding:8px 16px}
+.il-ttabs a:hover{background:var(--ink);color:#fff}
+.il-tcat{scroll-margin-top:140px;margin-bottom:64px}
+.il-tcat__head{display:flex;gap:18px;align-items:flex-start;margin-bottom:24px}
+.il-tcat__k{font-weight:800;font-size:1rem;color:#fff;background:var(--brass);border-radius:12px;padding:8px 11px;line-height:1}
+.il-tcat h2{margin:0 0 4px;font-size:clamp(1.5rem,3vw,2rem)}
+.il-tcat__head p{margin:0;color:var(--muted)}
