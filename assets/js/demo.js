@@ -24,7 +24,7 @@
   pill.className = 'wm-pill';
   pill.href = isV2 ? root + 'index.html' : root + 'v2/index.html';
   pill.innerHTML = '<span class="wm-pill__dot" aria-hidden="true"></span>' +
-    (isV2 ? 'Découvrir la version corporate' : 'Découvrir la version moderne');
+    (isV2 ? 'Découvrir la version corporate' : 'Découvrir la version institutionnelle');
   document.body.appendChild(pill);
 
   /* Formulaires factices : rien n'est envoyé */
