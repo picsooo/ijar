@@ -74,4 +74,15 @@
     }, reduce ? 400 : 60);
   });
   draw();
+
+  /* Largeur de la photo calée sur la carte (la couleur se dévoile sans décalage) */
+  function fit() { var ph = document.querySelector('.m-play__photo'); if (ph) ph.style.setProperty('--pw', ph.offsetWidth + 'px'); }
+  window.addEventListener('resize', fit); fit();
+
+  /* Apparition des blocs au défilement */
+  var els = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } }); }, { threshold: .12 });
+    els.forEach(function (el, i) { el.style.transitionDelay = (i % 3) * 80 + 'ms'; io.observe(el); });
+  } else { els.forEach(function (el) { el.classList.add('is-in'); }); }
 })();
