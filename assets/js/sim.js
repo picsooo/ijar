@@ -197,7 +197,7 @@
     if (t.classList.contains('sx-cmp')) { S.years = parseInt(t.dataset.y, 10); touched[4] = true; render(); return; }
     if (t.dataset.tab) { tableMode = t.dataset.tab; $$('.sx-tabs button').forEach(function (x) { x.setAttribute('aria-pressed', x === t ? 'true' : 'false'); }); render(); return; }
     if (t.id === 'sx-share') { return; }
-    if (t.id === 'sx-print') { window.print(); return; }
+    if (t.id === 'sx-print') { return; }
   });
   $('#sx-amount').addEventListener('input', function (e) {
     var v = parseFloat(e.target.value.replace(/[^\d]/g, '')) || 0;

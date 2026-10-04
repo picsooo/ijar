@@ -512,3 +512,5 @@ body[data-page="sim"] .wm-pill{bottom:calc(122px + env(safe-area-inset-bottom,0p
 .sx-tip svg{color:#e8860c;flex:none}
 .sx-tip::after{content:"";position:absolute;left:28px;top:100%;margin-left:-6px;border:6px solid transparent;border-top-color:#fff}
 .sx-lock:hover .sx-tip,.sx-lock:focus .sx-tip,.sx-lock:focus-within .sx-tip{opacity:1;visibility:visible;transform:none}
+.sx-lock--r .sx-tip{left:auto;right:0}
+.sx-lock--r .sx-tip::after{left:auto;right:22px}
