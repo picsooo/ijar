@@ -474,3 +474,23 @@ body[data-page="sim"] .wm-pill{bottom:calc(122px + env(safe-area-inset-bottom,0p
 .il-vidpill{text-decoration:none;white-space:nowrap;display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;background:#fff;color:var(--ink);border-radius:999px;padding:5px 12px 5px 6px;font:800 .78rem/1.2 var(--sans)}
 .il-vidpill i{width:20px;height:20px;border-radius:50%;background:var(--brass);display:grid;place-items:center;animation:ilPulse 2s infinite}
 .il-vidpill i::after{content:"";border-left:7px solid #fff;border-top:4.5px solid transparent;border-bottom:4.5px solid transparent;margin-left:2px}
+
+/* ---------- Tutoriels ---------- */
+.il-tutos{display:grid;gap:26px}
+@media (min-width:760px){.il-tutos{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1100px){.il-tutos{grid-template-columns:repeat(3,1fr)}}
+.il-tuto{background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:0 1px 0 rgba(11,47,87,.06),0 14px 34px rgba(11,47,87,.08);display:flex;flex-direction:column}
+.il-tuto__media{position:relative;aspect-ratio:16/9;background:var(--ink)}
+.il-tuto__media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
+.il-tuto--soon .il-tuto__media{display:grid;place-items:center;background:linear-gradient(135deg,var(--ink),var(--ink-2))}
+.il-tuto--soon .il-tuto__media span{color:#fff;font-weight:700;font-size:.85rem;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 14px}
+.il-tuto--soon{opacity:.75}
+.il-tuto__body{padding:20px 22px 24px;position:relative;flex:1}
+.il-tuto__n{font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--brass)}
+.il-tuto h3{margin:8px 0 6px}
+.il-tuto p{color:var(--muted);font-size:.95rem;margin:0}
+.il-tuto__d{position:absolute;top:18px;right:20px;font-size:.78rem;font-weight:700;color:var(--muted);background:var(--paper);border-radius:999px;padding:3px 10px}
+.il-tuto__cta{margin-top:44px;background:var(--ink);color:#fff;border-radius:var(--r);padding:32px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.il-tuto__cta h2{color:#fff;font-size:clamp(1.6rem,3.5vw,2.3rem);margin:0 0 6px}
+.il-tuto__cta p{margin:0;color:#c4d3e6}
+.il-tuto__btns{display:flex;gap:10px;flex-wrap:wrap}

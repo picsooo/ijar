@@ -6,6 +6,7 @@
     ['secteurs.html', 'Secteurs', 'secteurs'],
     ['simulateur.html', 'Simulateur', 'sim'],
     ['a-propos.html', 'À propos', 'apropos'],
+    ['tutoriels.html', 'Tutoriels', 'tuto'],
     ['faq.html', 'Questions', 'faq'],
     ['contact.html', 'Contact', 'contact']
   ];
